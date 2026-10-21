@@ -72,6 +72,10 @@ sahkaarx-stage-portfolio-d5b2372f/
 - **Focus**: Structuring a clean linear Git history adhering strictly to [Conventional Commits v1.0.0](https://www.conventionalcommits.org/en/v1.0.0/), enforcing single-purpose commits, imperative mood commit messages, and automated verification of Git history on feature branch [`feature/atomic-commits-and-messaging`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/atomic-commits-and-messaging).
 - **Key Artifacts**: [Atomic Commits Guide](practice/week-02-practice-atomic-commits-and-clear-messaging/ATOMIC_COMMITS_GUIDE.md), [Commit Log Audit](practice/week-02-practice-atomic-commits-and-clear-messaging/COMMIT_LOG_AUDIT.md), [`src/utils/commit_validator.py`](src/utils/commit_validator.py), [`tests/test_commit_validator.py`](tests/test_commit_validator.py), [`scripts/verify_commit_history.py`](scripts/verify_commit_history.py), [`scripts/run_atomic_commits_practice.ps1`](scripts/run_atomic_commits_practice.ps1).
 
+### [Week 02 Practice: Basic Git Workflow with Multiple Commits](practice/week-02-practice-basic-git-workflow-with-multiple-commit/README.md)
+- **Focus**: Demonstrating proficiency with core Git commands (`add`, `commit`, `pull`, `push`), executing 3+ atomic commits on dedicated feature branch [`feature/basic-git-workflow`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/basic-git-workflow), synchronizing with `main` via `pull`, and preparing a verified Pull Request ready for merge.
+- **Key Artifacts**: [Git Workflow Guide](practice/week-02-practice-basic-git-workflow-with-multiple-commit/GIT_WORKFLOW_GUIDE.md), [Commit History Audit](practice/week-02-practice-basic-git-workflow-with-multiple-commit/COMMIT_HISTORY_AUDIT.md), [Pull Request Specification](practice/week-02-practice-basic-git-workflow-with-multiple-commit/PULL_REQUEST.md), [`src/utils/git_ops.py`](src/utils/git_ops.py), [`tests/test_git_ops.py`](tests/test_git_ops.py), [`scripts/verify_basic_git_workflow.py`](scripts/verify_basic_git_workflow.py), [`scripts/run_basic_git_workflow_practice.ps1`](scripts/run_basic_git_workflow_practice.ps1).
+
 ---
 
 ## 🛠️ Quick Start & Verification
@@ -94,13 +98,19 @@ Validate that the feature branch contains 4+ atomic commits adhering to Conventi
 python scripts/verify_commit_history.py
 ```
 
-### 4. Run Automated Test Suite
-Execute unit tests validating core utilities, commit validation rules, `.gitignore` rules, and structural contracts:
+### 4. Verify Basic Git Workflow & Multiple Commits
+Validate the feature branch, 3+ atomic commits, and command lifecycle:
+```bash
+python scripts/verify_basic_git_workflow.py
+```
+
+### 5. Run Automated Test Suite
+Execute unit tests validating core utilities, Git operations, commit validation rules, `.gitignore` rules, and structural contracts:
 ```bash
 python -m unittest discover tests/
 ```
 
-### 5. Run Week 01 Auth Service Tests
+### 6. Run Week 01 Auth Service Tests
 ```bash
 python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth_service.py
 ```
@@ -117,6 +127,8 @@ python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth
 ## 🔗 Repository Information
 - **GitHub Repository**: [https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f)
 - **Primary Feature Branches**:
+  - [`feature/basic-git-workflow`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/basic-git-workflow) (Week 02 Basic Git Workflow Practice)
   - [`feature/atomic-commits-and-messaging`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/atomic-commits-and-messaging) (Week 02 Atomic Commits Practice)
   - [`feature/gitignore-config`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/gitignore-config) (Week 02 .gitignore Practice)
   - [`feature/repo-restructure`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/repo-restructure) (Week 02 Restructure Practice)
+

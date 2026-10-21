@@ -7,6 +7,7 @@ We adhere to a strict feature-branch workflow derived from GitHub Flow:
 main (production-ready, protected)
  │
  ├── feature/atomic-commits-and-messaging (feature branch)
+ ├── feature/basic-git-workflow           (feature branch)
  ├── feature/gitignore-config             (feature branch)
  ├── feature/jwt-auth                     (feature branch)
  ├── feature/oauth2-auth                  (feature branch)

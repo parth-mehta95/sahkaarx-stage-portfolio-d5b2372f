@@ -10,6 +10,16 @@ from .commit_validator import (
     CommitValidationResult,
     STANDARD_COMMIT_TYPES,
 )
+from .git_ops import (
+    GitCommitInfo,
+    WorkflowStep,
+    WorkflowValidationResult,
+    GitWorkflowTracker,
+    get_current_git_branch,
+    is_git_working_tree_clean,
+    get_recent_commits,
+    check_branch_divergence,
+)
 
 __all__ = [
     "setup_logger",
@@ -18,4 +28,13 @@ __all__ = [
     "validate_commit_list",
     "CommitValidationResult",
     "STANDARD_COMMIT_TYPES",
+    "GitCommitInfo",
+    "WorkflowStep",
+    "WorkflowValidationResult",
+    "GitWorkflowTracker",
+    "get_current_git_branch",
+    "is_git_working_tree_clean",
+    "get_recent_commits",
+    "check_branch_divergence",
 ]
+

@@ -28,6 +28,11 @@ sahkaarx-stage-portfolio-d5b2372f/
 │   │   ├── README.md                    # Atomic commits practice overview & verification
 │   │   ├── ATOMIC_COMMITS_GUIDE.md      # Comprehensive guide on atomic commits & Conventional Commits
 │   │   └── COMMIT_LOG_AUDIT.md          # Audit matrix of atomic commits & coherent narrative
+│   ├── week-02-practice-basic-git-workflow-with-multiple-commit/
+│   │   ├── README.md                    # Basic git workflow practice overview & quick start
+│   │   ├── GIT_WORKFLOW_GUIDE.md        # Deep dive into Git three-tree model & command lifecycle
+│   │   ├── COMMIT_HISTORY_AUDIT.md      # Command matrix, atomic commit audit, & commit graph
+│   │   └── PULL_REQUEST.md              # Production-ready Pull Request ready for merge
 │   ├── week-02-practice-gitignore-configuration-and-repository/
 │   │   ├── README.md                    # Gitignore configuration & cleanliness deliverable
 │   │   ├── EXCLUDED_PATTERNS.md         # Exhaustive reference of all excluded patterns
@@ -38,9 +43,11 @@ sahkaarx-stage-portfolio-d5b2372f/
 │       └── GIT_WORKFLOW.md              # Demonstration of Git commands, branch & atomic commits
 ├── scripts/                             # Automation, maintenance, and verification tooling
 │   ├── run_atomic_commits_practice.ps1  # Automated atomic commits practice runner & Git publisher
+│   ├── run_basic_git_workflow_practice.ps1 # Automated basic git workflow runner & remote publisher
 │   ├── run_conflict_resolution.ps1      # Automated conflict resolution workflow script
 │   ├── run_gitignore_practice.ps1       # Automated .gitignore workflow runner
 │   ├── run_repo_restructure.ps1         # Automated repo restructure & atomic commit runner
+│   ├── verify_basic_git_workflow.py     # Automated basic git workflow & sync auditor
 │   ├── verify_commit_history.py         # Automated commit history & Conventional Commits validator
 │   ├── verify_gitignore.py              # Automated .gitignore pattern & clean repo validator
 │   └── verify_structure.py              # Python structural validation & compliance checker
@@ -50,10 +57,12 @@ sahkaarx-stage-portfolio-d5b2372f/
 │       ├── __init__.py                  # Utility package exports
 │       ├── commit_validator.py          # Conventional Commits parser and validation engine
 │       ├── env_helper.py                # Environment variable reader with type safety
+│       ├── git_ops.py                   # Git operations, state inspection, and workflow tracker
 │       └── logger.py                    # Standardized structured console logger
 ├── tests/                               # Comprehensive automated test suites
 │   ├── __init__.py                      # Test package marker
 │   ├── test_commit_validator.py         # Unit tests for Conventional Commits rules
+│   ├── test_git_ops.py                  # Unit tests for Git workflow tracker and state helpers
 │   ├── test_gitignore_rules.py          # Unit tests for .gitignore pattern matching
 │   └── test_repo_structure.py           # Integrity tests for repository layout & utilities
 ├── .gitignore                           # Comprehensive multi-environment ignore rules
