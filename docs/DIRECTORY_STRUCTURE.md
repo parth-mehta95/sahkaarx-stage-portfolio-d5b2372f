@@ -24,6 +24,10 @@ sahkaarx-stage-portfolio-d5b2372f/
 │   │   ├── auth_service.py              # Multi-strategy resolved authentication module
 │   │   ├── conflict_markers_example.md  # Raw conflict marker illustration & explanation
 │   │   └── test_auth_service.py         # Unit tests validating resolved implementation
+│   ├── week-02-practice-atomic-commits-and-clear-messaging/
+│   │   ├── README.md                    # Atomic commits practice overview & verification
+│   │   ├── ATOMIC_COMMITS_GUIDE.md      # Comprehensive guide on atomic commits & Conventional Commits
+│   │   └── COMMIT_LOG_AUDIT.md          # Audit matrix of atomic commits & coherent narrative
 │   ├── week-02-practice-gitignore-configuration-and-repository/
 │   │   ├── README.md                    # Gitignore configuration & cleanliness deliverable
 │   │   ├── EXCLUDED_PATTERNS.md         # Exhaustive reference of all excluded patterns
@@ -33,19 +37,24 @@ sahkaarx-stage-portfolio-d5b2372f/
 │       ├── DIRECTORY_LAYOUT.md          # Before-and-after structural comparison & benefits
 │       └── GIT_WORKFLOW.md              # Demonstration of Git commands, branch & atomic commits
 ├── scripts/                             # Automation, maintenance, and verification tooling
+│   ├── run_atomic_commits_practice.ps1  # Automated atomic commits practice runner & Git publisher
 │   ├── run_conflict_resolution.ps1      # Automated conflict resolution workflow script
 │   ├── run_gitignore_practice.ps1       # Automated .gitignore workflow runner
 │   ├── run_repo_restructure.ps1         # Automated repo restructure & atomic commit runner
+│   ├── verify_commit_history.py         # Automated commit history & Conventional Commits validator
 │   ├── verify_gitignore.py              # Automated .gitignore pattern & clean repo validator
 │   └── verify_structure.py              # Python structural validation & compliance checker
 ├── src/                                 # Reusable core library packages and utilities
 │   ├── __init__.py                      # Package initialization marker
 │   └── utils/                           # Shared utility modules
 │       ├── __init__.py                  # Utility package exports
+│       ├── commit_validator.py          # Conventional Commits parser and validation engine
 │       ├── env_helper.py                # Environment variable reader with type safety
 │       └── logger.py                    # Standardized structured console logger
 ├── tests/                               # Comprehensive automated test suites
 │   ├── __init__.py                      # Test package marker
+│   ├── test_commit_validator.py         # Unit tests for Conventional Commits rules
+│   ├── test_gitignore_rules.py          # Unit tests for .gitignore pattern matching
 │   └── test_repo_structure.py           # Integrity tests for repository layout & utilities
 ├── .gitignore                           # Comprehensive multi-environment ignore rules
 └── README.md                            # Main portfolio hub and navigation index

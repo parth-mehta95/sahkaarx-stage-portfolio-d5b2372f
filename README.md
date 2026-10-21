@@ -68,6 +68,10 @@ sahkaarx-stage-portfolio-d5b2372f/
 - **Focus**: Reorganizing repository into an enterprise directory structure, building a multi-environment [`.gitignore`](.gitignore), establishing central documentation in [`docs/`](docs/), modularizing utilities in [`src/`](src/), adding unit tests in [`tests/`](tests/), automating verification in [`scripts/`](scripts/), and demonstrating atomic Git commits on feature branch [`feature/repo-restructure`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/repo-restructure).
 - **Key Artifacts**: [Directory Layout Analysis](practice/week-02-restructure-portfolio-repo-with-professional-org/DIRECTORY_LAYOUT.md), [Git Workflow & Atomic Commits](practice/week-02-restructure-portfolio-repo-with-professional-org/GIT_WORKFLOW.md).
 
+### [Week 02 Practice: Atomic Commits and Clear Messaging](practice/week-02-practice-atomic-commits-and-clear-messaging/README.md)
+- **Focus**: Structuring a clean linear Git history adhering strictly to [Conventional Commits v1.0.0](https://www.conventionalcommits.org/en/v1.0.0/), enforcing single-purpose commits, imperative mood commit messages, and automated verification of Git history on feature branch [`feature/atomic-commits-and-messaging`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/atomic-commits-and-messaging).
+- **Key Artifacts**: [Atomic Commits Guide](practice/week-02-practice-atomic-commits-and-clear-messaging/ATOMIC_COMMITS_GUIDE.md), [Commit Log Audit](practice/week-02-practice-atomic-commits-and-clear-messaging/COMMIT_LOG_AUDIT.md), [`src/utils/commit_validator.py`](src/utils/commit_validator.py), [`tests/test_commit_validator.py`](tests/test_commit_validator.py), [`scripts/verify_commit_history.py`](scripts/verify_commit_history.py), [`scripts/run_atomic_commits_practice.ps1`](scripts/run_atomic_commits_practice.ps1).
+
 ---
 
 ## 🛠️ Quick Start & Verification
@@ -84,13 +88,19 @@ Run the automated `.gitignore` compliance checker:
 python scripts/verify_gitignore.py
 ```
 
-### 3. Run Automated Test Suite
-Execute unit tests validating core utilities, `.gitignore` rules, and structural contracts:
+### 3. Verify Atomic Commits & Git History Compliance
+Validate that the feature branch contains 4+ atomic commits adhering to Conventional Commits:
+```bash
+python scripts/verify_commit_history.py
+```
+
+### 4. Run Automated Test Suite
+Execute unit tests validating core utilities, commit validation rules, `.gitignore` rules, and structural contracts:
 ```bash
 python -m unittest discover tests/
 ```
 
-### 3. Run Week 01 Auth Service Tests
+### 5. Run Week 01 Auth Service Tests
 ```bash
 python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth_service.py
 ```
@@ -106,4 +116,7 @@ python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth
 
 ## 🔗 Repository Information
 - **GitHub Repository**: [https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f)
-- **Primary Feature Branch**: [`feature/repo-restructure`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/repo-restructure)
+- **Primary Feature Branches**:
+  - [`feature/atomic-commits-and-messaging`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/atomic-commits-and-messaging) (Week 02 Atomic Commits Practice)
+  - [`feature/gitignore-config`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/gitignore-config) (Week 02 .gitignore Practice)
+  - [`feature/repo-restructure`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/repo-restructure) (Week 02 Restructure Practice)

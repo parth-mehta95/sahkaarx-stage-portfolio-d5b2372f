@@ -22,6 +22,7 @@ class TestRepositoryStructure(unittest.TestCase):
             "docs",
             "practice",
             "practice/week-01-create-intentional-merge-conflicts-and-resolve",
+            "practice/week-02-practice-atomic-commits-and-clear-messaging",
             "practice/week-02-practice-gitignore-configuration-and-repository",
             "practice/week-02-restructure-portfolio-repo-with-professional-org",
             "scripts",

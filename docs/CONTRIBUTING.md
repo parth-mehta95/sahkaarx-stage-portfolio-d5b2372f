@@ -6,9 +6,11 @@ We adhere to a strict feature-branch workflow derived from GitHub Flow:
 ```text
 main (production-ready, protected)
  │
- ├── feature/jwt-auth             (feature branch)
- ├── feature/oauth2-auth          (feature branch)
- └── feature/repo-restructure     (feature branch)
+ ├── feature/atomic-commits-and-messaging (feature branch)
+ ├── feature/gitignore-config             (feature branch)
+ ├── feature/jwt-auth                     (feature branch)
+ ├── feature/oauth2-auth                  (feature branch)
+ └── feature/repo-restructure             (feature branch)
 ```
 
 - **Branch Naming Conventions**:
@@ -20,7 +22,7 @@ main (production-ready, protected)
 ---
 
 ## 2. Commit Message Standards (Conventional Commits)
-All commit messages must follow the [Conventional Commits v1.0.0](https://www.conventionalcommits.org/) specification:
+All commit messages must follow the [Conventional Commits v1.0.0](https://www.conventionalcommits.org/) specification. For full architectural rationale, commit anatomy, and review checklists, see the [Atomic Commits Guide](../practice/week-02-practice-atomic-commits-and-clear-messaging/ATOMIC_COMMITS_GUIDE.md).
 
 ```text
 <type>(<optional scope>): <clear, imperative description>
