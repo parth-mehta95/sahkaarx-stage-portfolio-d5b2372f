@@ -43,6 +43,7 @@ def check_directories(root: Path):
         "practice/week-02-practice-gitignore-configuration-and-repository",
         "practice/week-02-restructure-portfolio-repo-with-professional-org",
         "practice/week-03-create-and-merge-feature-branches",
+        "practice/week-06-finalize-capstone-integrate-variables-data-types",
         "scripts",
         "src",
         "src/utils",
@@ -91,6 +92,10 @@ def check_essential_files(root: Path):
         "practice/week-03-create-and-merge-feature-branches/PR_02_MERGE_ANALYZER.md",
         "practice/week-03-create-and-merge-feature-branches/PR_03_PR_LIFECYCLE_MANAGER.md",
         "practice/week-03-create-and-merge-feature-branches/MERGE_HISTORY_AUDIT.md",
+        "practice/week-06-finalize-capstone-integrate-variables-data-types/README.md",
+        "practice/week-06-finalize-capstone-integrate-variables-data-types/PULL_REQUEST.md",
+        "practice/week-06-finalize-capstone-integrate-variables-data-types/VARIABLES_AND_SCOPE_GUIDE.md",
+        "practice/week-06-finalize-capstone-integrate-variables-data-types/CAPSTONE_FINALIZATION_REPORT.md",
         "scripts/verify_gitignore.py",
         "scripts/run_gitignore_practice.ps1",
         "scripts/verify_commit_history.py",
@@ -99,7 +104,11 @@ def check_essential_files(root: Path):
         "scripts/run_basic_git_workflow_practice.ps1",
         "scripts/verify_feature_branches.py",
         "scripts/run_feature_branches_practice.ps1",
+        "scripts/verify_variables_data_types.py",
+        "scripts/run_capstone_finalization.ps1",
+        "execute_capstone_workflow.py",
         "src/__init__.py",
+        "src/variables_data_types.py",
         "src/utils/__init__.py",
         "src/utils/logger.py",
         "src/utils/commit_validator.py",
@@ -115,6 +124,7 @@ def check_essential_files(root: Path):
         "tests/test_branch_validator.py",
         "tests/test_merge_analyzer.py",
         "tests/test_pr_lifecycle.py",
+        "tests/test_variables_data_types.py",
     ]
 
     all_passed = True

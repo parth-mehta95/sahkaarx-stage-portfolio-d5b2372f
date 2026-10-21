@@ -56,6 +56,18 @@ main (production-ready trunk, CI protected)
  │  ▼
  * Merge pull request #3 from feature/pr-lifecycle-manager (--no-ff)
  │
+ ├── [Branch Out] ───────┐
+ │                       ▼
+ │             feature/variables-data-types
+ │             ├── feat(variables-data-types): implement core type conversion and variable scope module
+ │             ├── test(variables-data-types): add unit tests
+ │             ├── docs(capstone): document variables data types guide, pr deliverable, and capstone finalization
+ │             └── chore(portfolio): finalize capstone repository integration and verify production readiness
+ │                       │
+ │  ┌────────────────────┘ [PR #4: Verified & Approved - Capstone Finalization]
+ │  ▼
+ * Merge pull request #4 from feature/variables-data-types (--no-ff)
+ │
  ▼ (Clean, linear integration graph with traceable feature histories)
 ```
 

@@ -6,6 +6,7 @@ We adhere to a strict feature-branch workflow derived from GitHub Flow. For the 
 ```text
 main (production-ready, protected)
  │
+ ├── feature/variables-data-types         (feature branch - Week 06 Capstone)
  ├── feature/branch-strategy-validator    (feature branch - Week 03)
  ├── feature/merge-history-analyzer       (feature branch - Week 03)
  ├── feature/pr-lifecycle-manager         (feature branch - Week 03)

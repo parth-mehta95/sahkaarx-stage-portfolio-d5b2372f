@@ -32,20 +32,22 @@ sahkaarx-stage-portfolio-d5b2372f/
 │   ├── week-02-practice-basic-git-workflow-with-multiple-commit/
 │   ├── week-02-practice-gitignore-configuration-and-repository/
 │   ├── week-02-restructure-portfolio-repo-with-professional-org/
-│   └── week-03-create-and-merge-feature-branches/
-│       ├── README.md                    # Week 03 overview & deliverables
-│       ├── BRANCHING.md                 # Branching strategy & merge protocol
-│       ├── PR_01_BRANCH_VALIDATOR.md    # PR deliverable for Feature Branch 1
-│       ├── PR_02_MERGE_ANALYZER.md      # PR deliverable for Feature Branch 2
-│       ├── PR_03_PR_LIFECYCLE_MANAGER.md# PR deliverable for Feature Branch 3
-│       └── MERGE_HISTORY_AUDIT.md       # Merge topology and history hygiene audit
+│   ├── week-03-create-and-merge-feature-branches/
+│   └── week-06-finalize-capstone-integrate-variables-data-types/
+│       ├── README.md                    # Week 06 Capstone overview & verification
+│       ├── PULL_REQUEST.md              # PR #4 deliverable & review resolution
+│       ├── VARIABLES_AND_SCOPE_GUIDE.md # Deep-dive guide on variables, types & LEGB
+│       └── CAPSTONE_FINALIZATION_REPORT.md # Comprehensive portfolio audit & certification
 ├── scripts/                             # Automation, maintenance, and verification tooling
+│   ├── run_capstone_finalization.ps1    # Automated capstone branch, commits, PR merge & push runner
+│   ├── verify_variables_data_types.py   # Automated capstone type conversion & scope engine validator
 │   ├── run_feature_branches_practice.ps1# Automated feature branch creation, push & merge runner
 │   ├── verify_feature_branches.py       # Automated feature branch & merge validator
 │   ├── verify_structure.py              # Structural compliance & integrity checker
 │   └── ...                              # Weekly runners and compliance validators
 ├── src/                                 # Reusable core library packages
-│   ├── __init__.py                      # Package initialization marker
+│   ├── __init__.py                      # Package initialization marker & public exports
+│   ├── variables_data_types.py          # Type conversion engine, LEGB scope manager & data protection
 │   └── utils/                           # Shared utility library
 │       ├── branch_validator.py          # Automated branch naming convention & hygiene validator
 │       ├── merge_analyzer.py            # Merge history analyzer & clean commit auditor
@@ -55,6 +57,7 @@ sahkaarx-stage-portfolio-d5b2372f/
 │       ├── env_helper.py                # Environment variable reader
 │       └── logger.py                    # Structured console logger
 ├── tests/                               # Comprehensive automated test suites
+│   ├── test_variables_data_types.py     # Unit tests for type conversion, LEGB scope & closures
 │   ├── test_branch_validator.py         # Unit tests for branch naming & hygiene rules
 │   ├── test_merge_analyzer.py           # Unit tests for merge commit analysis
 │   ├── test_pr_lifecycle.py             # Unit tests for PR lifecycle states & checklist gates
@@ -92,47 +95,57 @@ sahkaarx-stage-portfolio-d5b2372f/
 - **Focus**: Establishing a formal branching strategy, implementing 3 feature branches following `<type>/<description>` naming conventions, making atomic Conventional Commits, publishing branches to GitHub, executing clean non-fast-forward (`--no-ff`) merges to `main` without unnecessary commits, and documenting PR deliverables and topology audit.
 - **Key Artifacts**: [`BRANCHING.md`](BRANCHING.md), [`practice/week-03-create-and-merge-feature-branches/BRANCHING.md`](practice/week-03-create-and-merge-feature-branches/BRANCHING.md), [`PR_01_BRANCH_VALIDATOR.md`](practice/week-03-create-and-merge-feature-branches/PR_01_BRANCH_VALIDATOR.md), [`PR_02_MERGE_ANALYZER.md`](practice/week-03-create-and-merge-feature-branches/PR_02_MERGE_ANALYZER.md), [`PR_03_PR_LIFECYCLE_MANAGER.md`](practice/week-03-create-and-merge-feature-branches/PR_03_PR_LIFECYCLE_MANAGER.md), [`MERGE_HISTORY_AUDIT.md`](practice/week-03-create-and-merge-feature-branches/MERGE_HISTORY_AUDIT.md), [`src/utils/branch_validator.py`](src/utils/branch_validator.py), [`src/utils/merge_analyzer.py`](src/utils/merge_analyzer.py), [`src/utils/pr_lifecycle.py`](src/utils/pr_lifecycle.py), [`scripts/verify_feature_branches.py`](scripts/verify_feature_branches.py), [`scripts/run_feature_branches_practice.ps1`](scripts/run_feature_branches_practice.ps1).
 
+### [Week 06 Capstone: Finalize Capstone — Integrate Variables & Data Types Module](practice/week-06-finalize-capstone-integrate-variables-data-types/README.md)
+- **Focus**: Finalizing the engineering portfolio capstone with a production-grade Variables & Data Types module, implementing lossless explicit type conversions (primitives, Decimals, datetimes, collections), Python's LEGB (Local, Enclosing, Global, Built-in) variable scope resolution order, stateful closures with `nonlocal`, audited global state modification, comprehensive unit testing, and clean non-fast-forward (`--no-ff`) merge of PR #4 on [`feature/variables-data-types`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/variables-data-types).
+- **Key Artifacts**: [`src/variables_data_types.py`](src/variables_data_types.py), [`tests/test_variables_data_types.py`](tests/test_variables_data_types.py), [Pull Request Specification](practice/week-06-finalize-capstone-integrate-variables-data-types/PULL_REQUEST.md), [Variables & Scope Engineering Guide](practice/week-06-finalize-capstone-integrate-variables-data-types/VARIABLES_AND_SCOPE_GUIDE.md), [Capstone Finalization Report](practice/week-06-finalize-capstone-integrate-variables-data-types/CAPSTONE_FINALIZATION_REPORT.md), [`scripts/verify_variables_data_types.py`](scripts/verify_variables_data_types.py), [`scripts/run_capstone_finalization.ps1`](scripts/run_capstone_finalization.ps1), [`execute_capstone_workflow.py`](execute_capstone_workflow.py).
+
 ---
 
 ## 🛠️ Quick Start & Verification
 
-### 1. Verify Feature Branches & Clean Merges (Week 03)
+### 1. Verify Capstone Variables & Data Types (Week 06)
+Validate deliverables, type conversion rules, variable scope resolution, and unit tests:
+```bash
+python scripts/verify_variables_data_types.py
+```
+
+### 2. Verify Feature Branches & Clean Merges (Week 03)
 Validate the 3 feature branches, clean merge history, and unit tests:
 ```bash
 python scripts/verify_feature_branches.py
 ```
 
-### 2. Verify Repository Integrity & Structure
+### 3. Verify Repository Integrity & Structure
 Run the automated validation script to verify directory presence, `.gitignore` rules, and branch status:
 ```bash
 python scripts/verify_structure.py
 ```
 
-### 3. Verify .gitignore Rules & Repository Cleanliness
+### 4. Verify .gitignore Rules & Repository Cleanliness
 Run the automated `.gitignore` compliance checker:
 ```bash
 python scripts/verify_gitignore.py
 ```
 
-### 4. Verify Atomic Commits & Git History Compliance
+### 5. Verify Atomic Commits & Git History Compliance
 Validate that the feature branch contains 4+ atomic commits adhering to Conventional Commits:
 ```bash
 python scripts/verify_commit_history.py
 ```
 
-### 5. Verify Basic Git Workflow & Multiple Commits
+### 6. Verify Basic Git Workflow & Multiple Commits
 Validate the feature branch, 3+ atomic commits, and command lifecycle:
 ```bash
 python scripts/verify_basic_git_workflow.py
 ```
 
-### 6. Run Automated Test Suite
+### 7. Run Automated Test Suite
 Execute unit tests validating core utilities, Git operations, commit validation rules, `.gitignore` rules, and structural contracts:
 ```bash
 python -m unittest discover tests/
 ```
 
-### 7. Run Week 01 Auth Service Tests
+### 8. Run Week 01 Auth Service Tests
 ```bash
 python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth_service.py
 ```
@@ -150,6 +163,7 @@ python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth
 ## 🔗 Repository Information
 - **GitHub Repository**: [https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f)
 - **Primary Feature Branches**:
+  - [`feature/variables-data-types`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/variables-data-types) (Week 06 Capstone: Variables & Data Types Module)
   - [`feature/branch-strategy-validator`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/branch-strategy-validator) (Week 03 Branch Strategy Validator)
   - [`feature/merge-history-analyzer`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/merge-history-analyzer) (Week 03 Merge History Analyzer)
   - [`feature/pr-lifecycle-manager`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/pr-lifecycle-manager) (Week 03 PR Lifecycle Manager)
@@ -157,4 +171,5 @@ python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth
   - [`feature/atomic-commits-and-messaging`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/atomic-commits-and-messaging) (Week 02 Atomic Commits Practice)
   - [`feature/gitignore-config`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/gitignore-config) (Week 02 .gitignore Practice)
   - [`feature/repo-restructure`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/repo-restructure) (Week 02 Restructure Practice)
+
 
