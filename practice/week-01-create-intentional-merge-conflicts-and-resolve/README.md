@@ -80,9 +80,9 @@ git push -u origin feature/oauth2-auth --force
 ---
 
 ## Automated Execution Script
-An automated PowerShell execution script is available at [`run_conflict_resolution.ps1`](../../run_conflict_resolution.ps1). Run it via:
+An automated PowerShell execution script is available at [`run_conflict_resolution.ps1`](../../scripts/run_conflict_resolution.ps1). Run it via:
 ```powershell
-.\run_conflict_resolution.ps1
+.\scripts\run_conflict_resolution.ps1
 ```
 
 ## Verification & Testing

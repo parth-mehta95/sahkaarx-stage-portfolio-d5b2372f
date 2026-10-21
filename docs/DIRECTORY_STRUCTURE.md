@@ -1,0 +1,61 @@
+# Directory Structure & Layout Rationale
+
+## Overview
+This document provides a comprehensive breakdown of the directory organization established in the **SahkaarX Stage Portfolio** repository during the Week 02 restructuring initiative.
+
+---
+
+## Complete Repository Layout
+
+```text
+sahkaarx-stage-portfolio-d5b2372f/
+├── .github/                             # GitHub automation and repository governance
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md                # Standardized issue template for bug reporting
+│   │   └── feature_request.md           # Template for proposing new features
+│   └── PULL_REQUEST_TEMPLATE.md         # Template standardizing code review checklists
+├── docs/                                # Technical documentation & design guides
+│   ├── ARCHITECTURE.md                  # High-level architecture & system design
+│   ├── CONTRIBUTING.md                  # Development setup, branching model, and Git rules
+│   └── DIRECTORY_STRUCTURE.md           # Directory structure reference & rationale
+├── practice/                            # Weekly challenge deliverables & learning artifacts
+│   ├── week-01-create-intentional-merge-conflicts-and-resolve/
+│   │   ├── README.md                    # Detailed conflict creation & resolution walkthrough
+│   │   ├── auth_service.py              # Multi-strategy resolved authentication module
+│   │   ├── conflict_markers_example.md  # Raw conflict marker illustration & explanation
+│   │   └── test_auth_service.py         # Unit tests validating resolved implementation
+│   └── week-02-restructure-portfolio-repo-with-professional-org/
+│       ├── README.md                    # Restructure overview, deliverables, & validation
+│       ├── DIRECTORY_LAYOUT.md          # Before-and-after structural comparison & benefits
+│       └── GIT_WORKFLOW.md              # Demonstration of Git commands, branch & atomic commits
+├── scripts/                             # Automation, maintenance, and verification tooling
+│   ├── run_conflict_resolution.ps1      # Automated conflict resolution workflow script
+│   ├── run_repo_restructure.ps1         # Automated repo restructure & atomic commit runner
+│   └── verify_structure.py              # Python structural validation & compliance checker
+├── src/                                 # Reusable core library packages and utilities
+│   ├── __init__.py                      # Package initialization marker
+│   └── utils/                           # Shared utility modules
+│       ├── __init__.py                  # Utility package exports
+│       ├── env_helper.py                # Environment variable reader with type safety
+│       └── logger.py                    # Standardized structured console logger
+├── tests/                               # Comprehensive automated test suites
+│   ├── __init__.py                      # Test package marker
+│   └── test_repo_structure.py           # Integrity tests for repository layout & utilities
+├── .gitignore                           # Comprehensive multi-environment ignore rules
+└── README.md                            # Main portfolio hub and navigation index
+```
+
+---
+
+## Directory Rationale & Technical Benefits
+
+| Directory / File | Responsibility & Purpose | Technical Benefit |
+| :--- | :--- | :--- |
+| **`.github/`** | Repository governance, issue forms, PR review template | Establishes automated consistency for team issues, PR submissions, and code reviews. |
+| **`docs/`** | Technical architecture, guidelines, directory references | Centralizes system knowledge, speeding up developer onboarding and code review. |
+| **`practice/`** | Weekly technical tasks and portfolio milestones | Encapsulates challenge deliverables without polluting production source packages. |
+| **`scripts/`** | Shell and Python automation scripts | Eliminates manual, error-prone commands through one-click, reproducible scripts. |
+| **`src/`** | Core reusable business logic and utility libraries | Follows Python packaging conventions, enabling modular import paths (`from src.utils.logger import ...`). |
+| **`tests/`** | Automated unit, regression, and structural tests | Ensures code reliability, prevents regressions, and enables automated CI verification. |
+| **`.gitignore`** | Multi-stack ignore rules (Python, Node, OS, IDE, Secrets) | Prevents accidental leak of sensitive credentials, large caches, and OS artifacts. |
+| **`README.md`** | Root portfolio entry point & navigation hub | Provides an immediate high-impact overview of all projects, badges, and quick start guides. |
