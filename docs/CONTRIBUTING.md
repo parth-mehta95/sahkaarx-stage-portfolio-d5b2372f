@@ -1,24 +1,30 @@
 # Contributing & Engineering Standards
 
 ## 1. Branching Strategy
-We adhere to a strict feature-branch workflow derived from GitHub Flow:
+We adhere to a strict feature-branch workflow derived from GitHub Flow. For the complete strategy, naming grammar, merge matrix, and PR review protocol, see [`BRANCHING.md`](../BRANCHING.md) or [`docs/BRANCHING.md`](BRANCHING.md).
 
 ```text
 main (production-ready, protected)
  │
- ├── feature/atomic-commits-and-messaging (feature branch)
- ├── feature/basic-git-workflow           (feature branch)
- ├── feature/gitignore-config             (feature branch)
- ├── feature/jwt-auth                     (feature branch)
- ├── feature/oauth2-auth                  (feature branch)
- └── feature/repo-restructure             (feature branch)
+ ├── feature/branch-strategy-validator    (feature branch - Week 03)
+ ├── feature/merge-history-analyzer       (feature branch - Week 03)
+ ├── feature/pr-lifecycle-manager         (feature branch - Week 03)
+ ├── feature/atomic-commits-and-messaging (feature branch - Week 02)
+ ├── feature/basic-git-workflow           (feature branch - Week 02)
+ ├── feature/gitignore-config             (feature branch - Week 02)
+ ├── feature/jwt-auth                     (feature branch - Week 01)
+ ├── feature/oauth2-auth                  (feature branch - Week 01)
+ └── feature/repo-restructure             (feature branch - Week 02)
 ```
 
 - **Branch Naming Conventions**:
   - `feature/<short-description>`: New capabilities or structural enhancements.
-  - `fix/<issue-description>`: Bug fixes and defect remediation.
+  - `bugfix/<short-description>`: Bug fixes and defect remediation.
+  - `hotfix/<critical-issue>`: Production incidents requiring urgent patch.
   - `docs/<doc-name>`: Pure documentation updates.
   - `refactor/<target>`: Structural or code cleanup without behavioral change.
+  - `chore/<tool-or-dep>`: Tooling, dependencies, or maintenance.
+  - `test/<target>`: Test suites and benchmark harnesses.
 
 ---
 

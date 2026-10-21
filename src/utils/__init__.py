@@ -20,6 +20,25 @@ from .git_ops import (
     get_recent_commits,
     check_branch_divergence,
 )
+from .branch_validator import (
+    BranchValidator,
+    BranchNameValidationResult,
+    BranchType,
+)
+from .merge_analyzer import (
+    MergeAnalyzer,
+    MergeHistoryReport,
+    MergeCommitRecord,
+    CommitHygieneIssue,
+    MergeStrategy,
+)
+from .pr_lifecycle import (
+    PRLifecycleManager,
+    PullRequestMetadata,
+    PRState,
+    PRChangeType,
+    PRReviewChecklist,
+)
 
 __all__ = [
     "setup_logger",
@@ -36,5 +55,17 @@ __all__ = [
     "is_git_working_tree_clean",
     "get_recent_commits",
     "check_branch_divergence",
+    "BranchValidator",
+    "BranchNameValidationResult",
+    "BranchType",
+    "MergeAnalyzer",
+    "MergeHistoryReport",
+    "MergeCommitRecord",
+    "CommitHygieneIssue",
+    "MergeStrategy",
+    "PRLifecycleManager",
+    "PullRequestMetadata",
+    "PRState",
+    "PRChangeType",
+    "PRReviewChecklist",
 ]
-

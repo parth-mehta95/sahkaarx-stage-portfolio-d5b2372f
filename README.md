@@ -23,32 +23,44 @@ sahkaarx-stage-portfolio-d5b2372f/
 │   └── PULL_REQUEST_TEMPLATE.md         # PR submission checklist
 ├── docs/                                # Central architecture & engineering guidelines
 │   ├── ARCHITECTURE.md                  # System design & architectural principles
+│   ├── BRANCHING.md                     # Engineering branching strategy & merge protocol
 │   ├── CONTRIBUTING.md                  # Branching model & Conventional Commits guide
 │   └── DIRECTORY_STRUCTURE.md           # Full directory layout reference & rationale
 ├── practice/                            # Milestone challenge deliverables
 │   ├── week-01-create-intentional-merge-conflicts-and-resolve/
-│   │   ├── README.md                    # Conflict simulation & multi-strategy resolution
-│   │   ├── auth_service.py              # Harmonized JWT + OAuth2 authentication service
-│   │   ├── conflict_markers_example.md  # Git conflict marker walkthrough
-│   │   └── test_auth_service.py         # Unit tests validating resolved implementation
-│   └── week-02-restructure-portfolio-repo-with-professional-org/
-│       ├── README.md                    # Restructure overview & verification guide
-│       ├── DIRECTORY_LAYOUT.md          # Before-and-after structural comparison matrix
-│       └── GIT_WORKFLOW.md              # Demonstration of Git commands & atomic commits
+│   ├── week-02-practice-atomic-commits-and-clear-messaging/
+│   ├── week-02-practice-basic-git-workflow-with-multiple-commit/
+│   ├── week-02-practice-gitignore-configuration-and-repository/
+│   ├── week-02-restructure-portfolio-repo-with-professional-org/
+│   └── week-03-create-and-merge-feature-branches/
+│       ├── README.md                    # Week 03 overview & deliverables
+│       ├── BRANCHING.md                 # Branching strategy & merge protocol
+│       ├── PR_01_BRANCH_VALIDATOR.md    # PR deliverable for Feature Branch 1
+│       ├── PR_02_MERGE_ANALYZER.md      # PR deliverable for Feature Branch 2
+│       ├── PR_03_PR_LIFECYCLE_MANAGER.md# PR deliverable for Feature Branch 3
+│       └── MERGE_HISTORY_AUDIT.md       # Merge topology and history hygiene audit
 ├── scripts/                             # Automation, maintenance, and verification tooling
-│   ├── run_conflict_resolution.ps1      # Automated conflict resolution workflow script
-│   ├── run_repo_restructure.ps1         # Automated repo restructure & commit runner
-│   └── verify_structure.py              # Structural compliance & integrity checker
+│   ├── run_feature_branches_practice.ps1# Automated feature branch creation, push & merge runner
+│   ├── verify_feature_branches.py       # Automated feature branch & merge validator
+│   ├── verify_structure.py              # Structural compliance & integrity checker
+│   └── ...                              # Weekly runners and compliance validators
 ├── src/                                 # Reusable core library packages
 │   ├── __init__.py                      # Package initialization marker
 │   └── utils/                           # Shared utility library
-│       ├── __init__.py                  # Utility package exports
-│       ├── env_helper.py                # Environment variable reader with type validation
-│       └── logger.py                    # Standardized structured console logger
+│       ├── branch_validator.py          # Automated branch naming convention & hygiene validator
+│       ├── merge_analyzer.py            # Merge history analyzer & clean commit auditor
+│       ├── pr_lifecycle.py              # PR lifecycle state machine and checklist manager
+│       ├── commit_validator.py          # Conventional Commits validator
+│       ├── git_ops.py                   # Git operations & workflow tracker
+│       ├── env_helper.py                # Environment variable reader
+│       └── logger.py                    # Structured console logger
 ├── tests/                               # Comprehensive automated test suites
-│   ├── __init__.py                      # Test package marker
-│   └── test_repo_structure.py           # Unit tests for structure & core utilities
+│   ├── test_branch_validator.py         # Unit tests for branch naming & hygiene rules
+│   ├── test_merge_analyzer.py           # Unit tests for merge commit analysis
+│   ├── test_pr_lifecycle.py             # Unit tests for PR lifecycle states & checklist gates
+│   └── ...                              # Test suites for structure, gitignore, and commit rules
 ├── .gitignore                           # Comprehensive multi-environment ignore file
+├── BRANCHING.md                         # Engineering branching strategy & merge protocol
 └── README.md                            # Main portfolio hub & navigation index
 ```
 
@@ -76,41 +88,51 @@ sahkaarx-stage-portfolio-d5b2372f/
 - **Focus**: Demonstrating proficiency with core Git commands (`add`, `commit`, `pull`, `push`), executing 3+ atomic commits on dedicated feature branch [`feature/basic-git-workflow`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/basic-git-workflow), synchronizing with `main` via `pull`, and preparing a verified Pull Request ready for merge.
 - **Key Artifacts**: [Git Workflow Guide](practice/week-02-practice-basic-git-workflow-with-multiple-commit/GIT_WORKFLOW_GUIDE.md), [Commit History Audit](practice/week-02-practice-basic-git-workflow-with-multiple-commit/COMMIT_HISTORY_AUDIT.md), [Pull Request Specification](practice/week-02-practice-basic-git-workflow-with-multiple-commit/PULL_REQUEST.md), [`src/utils/git_ops.py`](src/utils/git_ops.py), [`tests/test_git_ops.py`](tests/test_git_ops.py), [`scripts/verify_basic_git_workflow.py`](scripts/verify_basic_git_workflow.py), [`scripts/run_basic_git_workflow_practice.ps1`](scripts/run_basic_git_workflow_practice.ps1).
 
+### [Week 03 Practice: Create and Merge Feature Branches](practice/week-03-create-and-merge-feature-branches/README.md)
+- **Focus**: Establishing a formal branching strategy, implementing 3 feature branches following `<type>/<description>` naming conventions, making atomic Conventional Commits, publishing branches to GitHub, executing clean non-fast-forward (`--no-ff`) merges to `main` without unnecessary commits, and documenting PR deliverables and topology audit.
+- **Key Artifacts**: [`BRANCHING.md`](BRANCHING.md), [`practice/week-03-create-and-merge-feature-branches/BRANCHING.md`](practice/week-03-create-and-merge-feature-branches/BRANCHING.md), [`PR_01_BRANCH_VALIDATOR.md`](practice/week-03-create-and-merge-feature-branches/PR_01_BRANCH_VALIDATOR.md), [`PR_02_MERGE_ANALYZER.md`](practice/week-03-create-and-merge-feature-branches/PR_02_MERGE_ANALYZER.md), [`PR_03_PR_LIFECYCLE_MANAGER.md`](practice/week-03-create-and-merge-feature-branches/PR_03_PR_LIFECYCLE_MANAGER.md), [`MERGE_HISTORY_AUDIT.md`](practice/week-03-create-and-merge-feature-branches/MERGE_HISTORY_AUDIT.md), [`src/utils/branch_validator.py`](src/utils/branch_validator.py), [`src/utils/merge_analyzer.py`](src/utils/merge_analyzer.py), [`src/utils/pr_lifecycle.py`](src/utils/pr_lifecycle.py), [`scripts/verify_feature_branches.py`](scripts/verify_feature_branches.py), [`scripts/run_feature_branches_practice.ps1`](scripts/run_feature_branches_practice.ps1).
+
 ---
 
 ## 🛠️ Quick Start & Verification
 
-### 1. Verify Repository Integrity & Structure
+### 1. Verify Feature Branches & Clean Merges (Week 03)
+Validate the 3 feature branches, clean merge history, and unit tests:
+```bash
+python scripts/verify_feature_branches.py
+```
+
+### 2. Verify Repository Integrity & Structure
 Run the automated validation script to verify directory presence, `.gitignore` rules, and branch status:
 ```bash
 python scripts/verify_structure.py
 ```
 
-### 2. Verify .gitignore Rules & Repository Cleanliness
+### 3. Verify .gitignore Rules & Repository Cleanliness
 Run the automated `.gitignore` compliance checker:
 ```bash
 python scripts/verify_gitignore.py
 ```
 
-### 3. Verify Atomic Commits & Git History Compliance
+### 4. Verify Atomic Commits & Git History Compliance
 Validate that the feature branch contains 4+ atomic commits adhering to Conventional Commits:
 ```bash
 python scripts/verify_commit_history.py
 ```
 
-### 4. Verify Basic Git Workflow & Multiple Commits
+### 5. Verify Basic Git Workflow & Multiple Commits
 Validate the feature branch, 3+ atomic commits, and command lifecycle:
 ```bash
 python scripts/verify_basic_git_workflow.py
 ```
 
-### 5. Run Automated Test Suite
+### 6. Run Automated Test Suite
 Execute unit tests validating core utilities, Git operations, commit validation rules, `.gitignore` rules, and structural contracts:
 ```bash
 python -m unittest discover tests/
 ```
 
-### 6. Run Week 01 Auth Service Tests
+### 7. Run Week 01 Auth Service Tests
 ```bash
 python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth_service.py
 ```
@@ -118,15 +140,19 @@ python practice/week-01-create-intentional-merge-conflicts-and-resolve/test_auth
 ---
 
 ## 📐 Engineering Guidelines
+- **Branching Strategy**: See [`BRANCHING.md`](BRANCHING.md) for full taxonomy, lifecycle, and merge protocols.
 - **Architecture**: See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for design patterns and system flow.
 - **Directory Details**: See [`docs/DIRECTORY_STRUCTURE.md`](docs/DIRECTORY_STRUCTURE.md) for rationale and benefits.
-- **Contributing & Commits**: See [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md) for the branching strategy and Conventional Commits format.
+- **Contributing & Commits**: See [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md) for Conventional Commits format.
 
 ---
 
 ## 🔗 Repository Information
 - **GitHub Repository**: [https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f)
 - **Primary Feature Branches**:
+  - [`feature/branch-strategy-validator`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/branch-strategy-validator) (Week 03 Branch Strategy Validator)
+  - [`feature/merge-history-analyzer`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/merge-history-analyzer) (Week 03 Merge History Analyzer)
+  - [`feature/pr-lifecycle-manager`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/pr-lifecycle-manager) (Week 03 PR Lifecycle Manager)
   - [`feature/basic-git-workflow`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/basic-git-workflow) (Week 02 Basic Git Workflow Practice)
   - [`feature/atomic-commits-and-messaging`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/atomic-commits-and-messaging) (Week 02 Atomic Commits Practice)
   - [`feature/gitignore-config`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/gitignore-config) (Week 02 .gitignore Practice)

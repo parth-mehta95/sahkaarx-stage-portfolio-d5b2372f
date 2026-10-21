@@ -26,6 +26,7 @@ class TestRepositoryStructure(unittest.TestCase):
             "practice/week-02-practice-basic-git-workflow-with-multiple-commit",
             "practice/week-02-practice-gitignore-configuration-and-repository",
             "practice/week-02-restructure-portfolio-repo-with-professional-org",
+            "practice/week-03-create-and-merge-feature-branches",
             "scripts",
             "src",
             "src/utils",
