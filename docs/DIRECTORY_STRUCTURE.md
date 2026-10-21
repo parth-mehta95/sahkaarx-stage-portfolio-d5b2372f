@@ -24,13 +24,19 @@ sahkaarx-stage-portfolio-d5b2372f/
 │   │   ├── auth_service.py              # Multi-strategy resolved authentication module
 │   │   ├── conflict_markers_example.md  # Raw conflict marker illustration & explanation
 │   │   └── test_auth_service.py         # Unit tests validating resolved implementation
+│   ├── week-02-practice-gitignore-configuration-and-repository/
+│   │   ├── README.md                    # Gitignore configuration & cleanliness deliverable
+│   │   ├── EXCLUDED_PATTERNS.md         # Exhaustive reference of all excluded patterns
+│   │   └── CLEAN_REPO_VERIFICATION.md   # Clean status logs & negative index verification
 │   └── week-02-restructure-portfolio-repo-with-professional-org/
 │       ├── README.md                    # Restructure overview, deliverables, & validation
 │       ├── DIRECTORY_LAYOUT.md          # Before-and-after structural comparison & benefits
 │       └── GIT_WORKFLOW.md              # Demonstration of Git commands, branch & atomic commits
 ├── scripts/                             # Automation, maintenance, and verification tooling
 │   ├── run_conflict_resolution.ps1      # Automated conflict resolution workflow script
+│   ├── run_gitignore_practice.ps1       # Automated .gitignore workflow runner
 │   ├── run_repo_restructure.ps1         # Automated repo restructure & atomic commit runner
+│   ├── verify_gitignore.py              # Automated .gitignore pattern & clean repo validator
 │   └── verify_structure.py              # Python structural validation & compliance checker
 ├── src/                                 # Reusable core library packages and utilities
 │   ├── __init__.py                      # Package initialization marker

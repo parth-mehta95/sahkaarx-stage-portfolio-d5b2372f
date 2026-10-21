@@ -60,6 +60,10 @@ sahkaarx-stage-portfolio-d5b2372f/
 - **Focus**: Git branch divergence, simulation of real merge conflicts between `feature/jwt-auth` and `feature/oauth2-auth`, analyzing conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`), resolving code into a unified multi-strategy pattern, and pushing clean history to GitHub.
 - **Key Artifacts**: [`auth_service.py`](practice/week-01-create-intentional-merge-conflicts-and-resolve/auth_service.py), [`conflict_markers_example.md`](practice/week-01-create-intentional-merge-conflicts-and-resolve/conflict_markers_example.md), [`run_conflict_resolution.ps1`](scripts/run_conflict_resolution.ps1).
 
+### [Week 02 Practice: .gitignore Configuration and Repository Cleanliness](practice/week-02-practice-gitignore-configuration-and-repository/README.md)
+- **Focus**: Establishing a production-grade multi-environment [`.gitignore`](.gitignore) protecting secrets, excluding Python build artifacts, virtual environments, and OS/IDE clutter; demonstrating 100% clean repository state and negative index verification on feature branch [`feature/gitignore-config`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/gitignore-config).
+- **Key Artifacts**: [Excluded Patterns Reference](practice/week-02-practice-gitignore-configuration-and-repository/EXCLUDED_PATTERNS.md), [Clean Repo Verification Report](practice/week-02-practice-gitignore-configuration-and-repository/CLEAN_REPO_VERIFICATION.md), [`scripts/verify_gitignore.py`](scripts/verify_gitignore.py), [`tests/test_gitignore_rules.py`](tests/test_gitignore_rules.py).
+
 ### [Week 02: Restructure Portfolio Repo with Professional Organization](practice/week-02-restructure-portfolio-repo-with-professional-org/README.md)
 - **Focus**: Reorganizing repository into an enterprise directory structure, building a multi-environment [`.gitignore`](.gitignore), establishing central documentation in [`docs/`](docs/), modularizing utilities in [`src/`](src/), adding unit tests in [`tests/`](tests/), automating verification in [`scripts/`](scripts/), and demonstrating atomic Git commits on feature branch [`feature/repo-restructure`](https://github.com/parth-mehta95/sahkaarx-stage-portfolio-d5b2372f/tree/feature/repo-restructure).
 - **Key Artifacts**: [Directory Layout Analysis](practice/week-02-restructure-portfolio-repo-with-professional-org/DIRECTORY_LAYOUT.md), [Git Workflow & Atomic Commits](practice/week-02-restructure-portfolio-repo-with-professional-org/GIT_WORKFLOW.md).
@@ -74,8 +78,14 @@ Run the automated validation script to verify directory presence, `.gitignore` r
 python scripts/verify_structure.py
 ```
 
-### 2. Run Automated Test Suite
-Execute unit tests validating core utilities and structural contracts:
+### 2. Verify .gitignore Rules & Repository Cleanliness
+Run the automated `.gitignore` compliance checker:
+```bash
+python scripts/verify_gitignore.py
+```
+
+### 3. Run Automated Test Suite
+Execute unit tests validating core utilities, `.gitignore` rules, and structural contracts:
 ```bash
 python -m unittest discover tests/
 ```

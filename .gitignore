@@ -41,6 +41,8 @@ venv.bak/
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
+.hypothesis/
+.pytype/
 .coverage
 .coverage.*
 htmlcov/
@@ -50,6 +52,12 @@ nosetests.xml
 coverage.xml
 *.cover
 *.py,cover
+pip-log.txt
+pip-wheel-metadata/
+
+# Jupyter & Interactive Computing
+.ipynb_checkpoints/
+*-checkpoint.ipynb
 
 # ------------------------------------------------------------------------------
 # 2. Node.js & Web Artifacts
@@ -70,6 +78,8 @@ out/
 # 3. Environment Variables & Secrets
 # ------------------------------------------------------------------------------
 .env
+.env.*
+!.env.example
 .env.local
 .env.development.local
 .env.test.local
@@ -80,8 +90,13 @@ out/
 *.crt
 *.pfx
 *.p12
+*.p8
+id_rsa*
 credentials.json
 secrets.json
+token.json
+auth.json
+service_account.json
 
 # ------------------------------------------------------------------------------
 # 4. Operating System Specific

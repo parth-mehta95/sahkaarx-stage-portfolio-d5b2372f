@@ -38,6 +38,7 @@ def check_directories(root: Path):
         "docs",
         "practice",
         "practice/week-01-create-intentional-merge-conflicts-and-resolve",
+        "practice/week-02-practice-gitignore-configuration-and-repository",
         "practice/week-02-restructure-portfolio-repo-with-professional-org",
         "scripts",
         "src",
@@ -68,14 +69,18 @@ def check_essential_files(root: Path):
         ".github/PULL_REQUEST_TEMPLATE.md",
         ".github/ISSUE_TEMPLATE/bug_report.md",
         ".github/ISSUE_TEMPLATE/feature_request.md",
+        "practice/week-02-practice-gitignore-configuration-and-repository/README.md",
         "practice/week-02-restructure-portfolio-repo-with-professional-org/README.md",
         "practice/week-02-restructure-portfolio-repo-with-professional-org/DIRECTORY_LAYOUT.md",
         "practice/week-02-restructure-portfolio-repo-with-professional-org/GIT_WORKFLOW.md",
+        "scripts/verify_gitignore.py",
+        "scripts/run_gitignore_practice.ps1",
         "src/__init__.py",
         "src/utils/__init__.py",
         "src/utils/logger.py",
         "tests/__init__.py",
         "tests/test_repo_structure.py",
+        "tests/test_gitignore_rules.py",
     ]
 
     all_passed = True
